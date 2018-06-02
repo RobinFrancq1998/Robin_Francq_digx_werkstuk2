@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Position" representedClassName="Position" syncable="YES" codeGenerationType="class">
-        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="villostand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VilloStand" inverseName="position" inverseEntity="VilloStand" syncable="YES"/>
-    </entity>
     <entity name="VilloStand" representedClassName="VilloStand" syncable="YES" codeGenerationType="class">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="available_bike_stands" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="available_bikes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="banking" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="banking" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="bike_stands" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="bonus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bonus" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="contract_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="last_update" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="position" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Position" inverseName="villostand" inverseEntity="Position" syncable="YES"/>
     </entity>
     <elements>
-        <element name="VilloStand" positionX="-45" positionY="0" width="128" height="225"/>
-        <element name="Position" positionX="-18" positionY="45" width="128" height="90"/>
+        <element name="VilloStand" positionX="-63" positionY="-18" width="128" height="240"/>
     </elements>
 </model>

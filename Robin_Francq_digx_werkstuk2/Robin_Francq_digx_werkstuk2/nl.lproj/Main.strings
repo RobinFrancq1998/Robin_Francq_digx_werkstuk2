@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "UpdateTime"; ObjectID = "4Wl-EM-Bej"; */
+"4Wl-EM-Bej.text" = "UpdateTime";
+
+/* Class = "UILabel"; text = "Last Update:"; ObjectID = "UNS-Zm-fbw"; */
+"UNS-Zm-fbw.text" = "Last Update:";
+
+/* Class = "UIButton"; normalTitle = "Refresh"; ObjectID = "mlX-CW-PG4"; */
+"mlX-CW-PG4.normalTitle" = "Refresh";

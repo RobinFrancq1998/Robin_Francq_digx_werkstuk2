@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Robin_Francq_digx_werkstuk2
+
+  Created by Robin Francq on 2/06/18.
+  Copyright © 2018 Robin Francq. All rights reserved.
+*/
+"LaatsteUpdateLabel"="Laatste Update";
+"RefreshButton" = "Verversen";

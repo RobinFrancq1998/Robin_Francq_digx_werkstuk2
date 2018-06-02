@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Robin_Francq_digx_werkstuk2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-Un-dQg">
+                                <rect key="frame" x="0.0" y="129" width="375" height="683"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vWZ-G4-om1"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Update:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNS-Zm-fbw">
+                                <rect key="frame" x="16" y="56" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UpdateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wl-EM-Bej">
+                                <rect key="frame" x="16" y="85" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlX-CW-PG4">
+                                <rect key="frame" x="306" y="51" width="53" height="30"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zxl-BQ-sAB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UNS-Zm-fbw" firstAttribute="leading" secondItem="4Wl-EM-Bej" secondAttribute="leading" id="CGK-6w-14o"/>
+                            <constraint firstItem="UNS-Zm-fbw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="CPm-rG-NfA"/>
+                            <constraint firstItem="4Wl-EM-Bej" firstAttribute="top" secondItem="UNS-Zm-fbw" secondAttribute="bottom" constant="8" symbolic="YES" id="HF9-2d-Ye8"/>
+                            <constraint firstItem="mlX-CW-PG4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LKb-J6-bPZ"/>
+                            <constraint firstAttribute="bottom" secondItem="TCa-Un-dQg" secondAttribute="bottom" id="TJZ-hx-dNY"/>
+                            <constraint firstItem="4Wl-EM-Bej" firstAttribute="leading" secondItem="TCa-Un-dQg" secondAttribute="leading" constant="16" id="V53-j3-1h3"/>
+                            <constraint firstItem="UNS-Zm-fbw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hza-42-qix"/>
+                            <constraint firstItem="UNS-Zm-fbw" firstAttribute="top" secondItem="mlX-CW-PG4" secondAttribute="top" constant="5" id="ifr-ra-i1s"/>
+                            <constraint firstItem="TCa-Un-dQg" firstAttribute="top" secondItem="4Wl-EM-Bej" secondAttribute="bottom" constant="23" id="uTi-b9-nAh"/>
+                            <constraint firstItem="mlX-CW-PG4" firstAttribute="trailing" secondItem="TCa-Un-dQg" secondAttribute="trailing" constant="-16" id="wcG-23-Or8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lastUpdate" destination="UNS-Zm-fbw" id="Dgh-nU-Ot3"/>
+                        <outlet property="mapView" destination="TCa-Un-dQg" id="JdA-k3-Zk6"/>
+                        <outlet property="refresh" destination="mlX-CW-PG4" id="0fG-3h-eL1"/>
+                        <outlet property="updateTime" destination="4Wl-EM-Bej" id="Gar-e0-h5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.00492610837438"/>
         </scene>
     </scenes>
 </document>
