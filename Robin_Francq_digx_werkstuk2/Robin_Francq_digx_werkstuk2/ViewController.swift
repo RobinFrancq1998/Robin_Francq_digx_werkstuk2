@@ -91,8 +91,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
             let available_bike_stands = String(villoStand.value(forKey: "available_bike_stands") as! Int)
             let bikes = String(villoStand.value(forKey: "available_bikes") as! Int)
             
-            let myTitle = name + " | " + status
-            let mySubtitle =  "BIKES: " + bikes + " | STANDS: " + available_bike_stands
+            let myTitle = name
+            let mySubtitle =  status + " | BIKES: " + bikes + " | STANDS: " + available_bike_stands
             
             let annotation = MyAnnotation(coordinate: location, title: myTitle, subtitle: mySubtitle)
             
